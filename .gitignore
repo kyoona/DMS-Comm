@@ -22,3 +22,17 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# IntelliJ IDEA specific
+/.idea/               # IntelliJ IDEA 프로젝트 설정 폴더
+*.iml                # 모듈 파일
+out/                 # 빌드 출력 디렉토리
+.idea_modules/       # 오래된 IDEA 모듈 설정 폴더
+.idea/workspace.xml  # 워크스페이스 설정 파일
+.idea/libraries/     # 라이브러리 설정 파일
+
+# IntelliJ 내부 파일
+*.iws
+*.ipr
+
+**/build/
