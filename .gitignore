@@ -24,7 +24,7 @@ hs_err_pid*
 replay_pid*
 
 # IntelliJ IDEA specific
-/.idea/               # IntelliJ IDEA 프로젝트 설정 폴더
+.idea/               # IntelliJ IDEA 프로젝트 설정 폴더
 *.iml                # 모듈 파일
 out/                 # 빌드 출력 디렉토리
 .idea_modules/       # 오래된 IDEA 모듈 설정 폴더
