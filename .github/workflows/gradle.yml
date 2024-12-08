@@ -49,11 +49,11 @@ jobs:
     needs: build-jar
     steps:
     
-    - name: Build Docker image of aiku-gateway
+    - name: Build Docker image of bulletin
       working-directory: bulletin
       run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/dms-bulletin:latest .
 
-    - name: Build Docker image of aiku-main
+    - name: Build Docker image of chatting
       working-directory: chatting
       run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/dms-chatting:latest .
 
