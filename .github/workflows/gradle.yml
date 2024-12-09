@@ -36,11 +36,10 @@ jobs:
         MYSQL_PASSWORD: 1234
         MYSQL_USERNAME: root
       run: |
-          pwd
-          ls
           gradle wrapper
           ./gradlew :bulletin:build
           ./gradlew :chatting:build
+          ls bulletin/build
     
     - name: Stop MySQL
       if: always()
