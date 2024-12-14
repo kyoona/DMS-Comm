@@ -88,6 +88,6 @@ jobs:
 
     - name: Push Docker image to Docker Hub
       run: |
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/dms-bulletin:latest
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/dms-chatting:latest
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/dms-gateway:latest
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/dms-bulletin:${{ github.sha }}
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/dms-chatting:${{ github.sha }}
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/dms-gateway:${{ github.sha }}
