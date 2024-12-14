@@ -25,7 +25,7 @@ public class BulletinController {
         if(postRequestDto.getTitle().equals("error")){
             System.exit(1);
         }
-        
+
         PostResponseDto createdPost = postService.createPost(postRequestDto);
         return new ResponseEntity<>(createdPost, HttpStatus.CREATED);
     }
