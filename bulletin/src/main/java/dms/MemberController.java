@@ -1,6 +1,7 @@
 package dms;
 
 import dms.domain.Member;
+import dms.dto.MemberAddDto;
 import dms.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,8 +16,8 @@ public class MemberController {
     private final MemberService memberService;  
 
     @PostMapping
-    public ResponseEntity<Member> createMember(@RequestBody Member member) {
-        Member createdMember = memberService.createMember(member);
+    public ResponseEntity<Member> createMember(@RequestBody MemberAddDto memberAddDto) {
+        Member createdMember = memberService.createMember(memberAddDto);
         return new ResponseEntity<>(createdMember, HttpStatus.CREATED);
     }
 
