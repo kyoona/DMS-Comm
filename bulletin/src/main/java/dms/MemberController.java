@@ -19,7 +19,7 @@ public class MemberController {
     public ResponseEntity<String > createMember(@RequestBody MemberAddDto memberAddDto) {
         Member createdMember = memberService.createMember(memberAddDto);
 
-        String res = createdMember.getMemberName() + "회원이 되신것을 환영합니다.";
+        String res = createdMember.getMemberName() + "회원이 되신것을 환영합니다!";
         return new ResponseEntity<>(res, HttpStatus.CREATED);
     }
 
