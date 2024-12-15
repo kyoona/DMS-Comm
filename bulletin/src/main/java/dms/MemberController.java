@@ -16,9 +16,11 @@ public class MemberController {
     private final MemberService memberService;  
 
     @PostMapping
-    public ResponseEntity<Member> createMember(@RequestBody MemberAddDto memberAddDto) {
+    public ResponseEntity<String > createMember(@RequestBody MemberAddDto memberAddDto) {
         Member createdMember = memberService.createMember(memberAddDto);
-        return new ResponseEntity<>(createdMember, HttpStatus.CREATED);
+
+        String res = createdMember.getMemberName() + "회원이 되신것을 환영합니다.";
+        return new ResponseEntity<>(res, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
